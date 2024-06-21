@@ -1,7 +1,9 @@
 const Nav = () => {
-  return (
-    <div>Nav</div>
-  )
+  return <nav>
+    <div></div>
+    <div>     
+    </div>
+  </nav>;
 }
 
 export default Nav
