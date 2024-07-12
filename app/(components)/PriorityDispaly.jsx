@@ -1,9 +1,16 @@
-import React from 'react'
+import { faFire } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const PriorityDispaly = () => {
   return (
-    <div>PriorityDispaly</div>
-  )
-}
+    <div>
+      <FontAwesomeIcon icon={faFire} />
+      <FontAwesomeIcon icon={faFire} />
+      <FontAwesomeIcon icon={faFire} />
+      <FontAwesomeIcon icon={faFire} />
+      <FontAwesomeIcon icon={faFire} />
+    </div>
+  );
+};
 
-export default PriorityDispaly
+export default PriorityDispaly;
