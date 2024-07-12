@@ -4,6 +4,8 @@ const Dashboard = () => {
   return (
     <div className="p-3">
       <TicketCard />
+      <TicketCard />
+      <TicketCard />
     </div>
   );
 };
