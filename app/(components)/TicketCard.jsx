@@ -1,6 +1,7 @@
 import DeleteBlock from "./DeleteBlock";
 import PriorityDispaly from "./PriorityDispaly";
 import ProgressDisplay from "./ProgressDisplay";
+import StatusDisplay from "./StatusDisplay";
 
 const TicketCard = () => {
   return (
@@ -8,6 +9,7 @@ const TicketCard = () => {
       <DeleteBlock />
       <PriorityDispaly />
       <ProgressDisplay />
+      <StatusDisplay />
     </div>
   );
 };
