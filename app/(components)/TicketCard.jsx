@@ -19,7 +19,9 @@ const TicketCard = () => {
       </p>
       <div className="flex-grow"></div>
       <div className="flex mr-2">
-        <ProgressDisplay />
+        <div>
+          <ProgressDisplay />
+        </div>
         <StatusDisplay />
       </div>
     </div>
