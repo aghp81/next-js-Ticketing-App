@@ -18,8 +18,9 @@ const TicketCard = () => {
         این توضیحات تیکت است. لطفا آن را انجام بده
       </p>
       <div className="flex-grow"></div>
-      <div className="flex mr-2">
-        <div>
+      <div className="flex mt-2">
+        <div className="flex flex-col">
+          <p className="text-xs my-1">08/31/23 10:43PM</p>
           <ProgressDisplay />
         </div>
         <StatusDisplay />
