@@ -14,6 +14,9 @@ const TicketCard = () => {
       </div>
       <h4>عنوان تیکت</h4>
       <hr className="h-px border-0 bg-page mb-2" />
+      <p className="whitespace-pre-wrap">
+        این توضیحات تیکت است. لطفا آن را انجام بده
+      </p>
       <ProgressDisplay />
       <StatusDisplay />
     </div>
