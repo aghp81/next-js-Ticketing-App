@@ -8,8 +8,8 @@ const TicketCard = () => {
     <div className="flex flex-col bg-card hover:bg-card-hover rounded-md shadow-lg p-3 m-2">
       <div className="flex mb-3">
         <PriorityDispaly />
-        <div>
-        <DeleteBlock />
+        <div className="mr-auto">
+          <DeleteBlock />
         </div>
       </div>
       <ProgressDisplay />
