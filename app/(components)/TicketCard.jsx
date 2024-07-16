@@ -18,7 +18,7 @@ const TicketCard = () => {
         این توضیحات تیکت است. لطفا آن را انجام بده
       </p>
       <div className="flex-grow"></div>
-      <div>
+      <div className="flex mr-2">
         <ProgressDisplay />
         <StatusDisplay />
       </div>
