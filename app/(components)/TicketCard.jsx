@@ -17,6 +17,7 @@ const TicketCard = () => {
       <p className="whitespace-pre-wrap">
         این توضیحات تیکت است. لطفا آن را انجام بده
       </p>
+      <div className="flex-grow"></div>
       <ProgressDisplay />
       <StatusDisplay />
     </div>
