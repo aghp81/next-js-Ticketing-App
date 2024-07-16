@@ -23,7 +23,7 @@ const TicketCard = () => {
           <p className="text-xs my-1">08/31/23 10:43PM</p>
           <ProgressDisplay />
         </div>
-        <div>
+        <div className="mr-auto flex items-end">
           <StatusDisplay />
         </div>
       </div>
