@@ -130,7 +130,6 @@ const TicketForm = () => {
           >
             <option value="not started">شروع نشده</option>
             <option value="started">شروع شده</option>
-            <option value="not started">شروع نشده</option>
             <option value="done"> انجام شده</option>
           </select>
           <input type="submit" className="btn" value="ایجاد تیکت" />
