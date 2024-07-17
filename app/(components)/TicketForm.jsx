@@ -122,6 +122,18 @@ const TicketForm = () => {
             max="100"
             onChange={handleChange}
           />
+          <label>وضعیت</label>
+          <select
+            name="status"
+            value={formData.status}
+            onChange={handleChange}
+          >
+            <option value="not started">شروع نشده</option>
+            <option value="started">شروع شده</option>
+            <option value="not started">شروع نشده</option>
+            <option value="done"> انجام شده</option>
+          </select>
+          <input type="submit" className="btn" value="ایجاد تیکت" />
         </div>
       </form>
     </div>
