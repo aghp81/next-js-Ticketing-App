@@ -13,6 +13,8 @@ const TicketForm = () => {
     status: "شروع نشده",
     category: "مشکل سخت افزاری",
   };
+
+  const [formData, setFormData] = useState(startingTicketData);
   return <div>TicketForm</div>;
 };
 
