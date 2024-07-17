@@ -65,6 +65,17 @@ const TicketForm = () => {
           <option value="ُSoftware Problem">مشکل نرم افزار</option>
           <option value="Project">پروژه ها</option>
         </select>
+        <label>اولویت</label>
+        <div>
+          <input
+            id="priority-1"
+            name="priority"
+            type="radio"
+            onChange={handleChange}
+            value={1}
+            checked={formData.priority == 1}
+          />
+        </div>
       </form>
     </div>
   );
