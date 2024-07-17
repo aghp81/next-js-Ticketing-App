@@ -19,6 +19,15 @@ const TicketForm = () => {
     <div className="flex justify-center">
       <form action="">
         <h3>ایجاد تیکت</h3>
+        <label>عنوان</label>
+        <input
+          id="title"
+          name="title"
+          type="text"
+          onChange={handleChange}
+          required={true}
+          value={formData.title}
+        />
       </form>
     </div>
   );
