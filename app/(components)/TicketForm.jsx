@@ -1,9 +1,7 @@
-import React from 'react'
+import { useRouter } from "next/router";
 
 const TicketForm = () => {
-  return (
-    <div>TicketForm</div>
-  )
-}
+  return <div>TicketForm</div>;
+};
 
-export default TicketForm
+export default TicketForm;
