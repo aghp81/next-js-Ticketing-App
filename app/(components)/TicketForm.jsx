@@ -112,6 +112,16 @@ const TicketForm = () => {
             checked={formData.priority == 5}
           />
           <label>5</label>
+          <label>پیشرفت</label>
+          <input
+            type="range"
+            id="progress"
+            name="progress"
+            value={formData.progress}
+            min="0"
+            max="100"
+            onChange={handleChange}
+          />
         </div>
       </form>
     </div>
