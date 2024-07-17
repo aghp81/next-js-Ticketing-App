@@ -46,6 +46,25 @@ const TicketForm = () => {
           required={true}
           value={formData.title}
         />
+        <label>توضیحات</label>
+        <textarea
+          id="description"
+          name="description"
+          onChange={handleChange}
+          required={true}
+          value={formData.description}
+          rows="5"
+        />
+        <label>دسته بندی</label>
+        <select
+          name="category"
+          value={formData.category}
+          onChange={handleChange}
+        >
+          <option value="Hardware Problem">مشکل سخت افزار</option>
+          <option value="ُSoftware Problem">مشکل نرم افزار</option>
+          <option value="Project">پروژه ها</option>
+        </select>
       </form>
     </div>
   );
