@@ -15,6 +15,10 @@ const TicketForm = () => {
     }));
   };
 
+  const handleSubmit = () => {
+    console.log("ثبت شد");
+  };
+
   const startingTicketData = {
     title: "",
     description: "",
