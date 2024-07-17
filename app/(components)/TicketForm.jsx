@@ -15,7 +15,13 @@ const TicketForm = () => {
   };
 
   const [formData, setFormData] = useState(startingTicketData);
-  return <div>TicketForm</div>;
+  return (
+    <div className="flex justify-center">
+      <form action="">
+        <h3>ایجاد تیکت</h3>
+      </form>
+    </div>
+  );
 };
 
 export default TicketForm;
