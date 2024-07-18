@@ -24,6 +24,9 @@ const TicketForm = () => {
 
     })
     
+    if (!res.ok){
+      throw new Error("خطا! تیکت ایجاد نشد")
+    }
   };
 
   const startingTicketData = {
