@@ -16,7 +16,14 @@ const TicketForm = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
+    e.preventDefault();
+    const res = await fetch("api/Tickets", {
+      method: "POST",
+      body: JSON.stringify({formData}),
+      "content-type": "application/json"
+
+    })
+    
   };
 
   const startingTicketData = {
