@@ -132,7 +132,7 @@ const TicketForm = () => {
             <option value="started">شروع شده</option>
             <option value="done"> انجام شده</option>
           </select>
-          <input type="submit" className="btn" value="ایجاد تیکت" />
+          <input type="submit" className="btn max-w-xs" value="ایجاد تیکت" />
         </div>
       </form>
     </div>
