@@ -17,7 +17,7 @@ const TicketForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await fetch("api/Tickets", {
       method: "POST",
