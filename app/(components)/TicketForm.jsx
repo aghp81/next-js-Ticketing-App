@@ -29,6 +29,9 @@ const TicketForm = () => {
     if (!res.ok){
       throw new Error("خطا! تیکت ایجاد نشد")
     }
+
+    router.refresh();
+    router.push("/");
   };
 
   const startingTicketData = {
