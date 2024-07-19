@@ -13,17 +13,21 @@ const getTickets = async () => {
   }
 };
 
-const Dashboard = () => {
-
+const Dashboard = async () => {
   // نمایش تیکتها در صفحه اصلی از دیتابیس
-  const {tickets} = await getTickets()
+  const { tickets } = await getTickets();
+
+
+  // for remove duplicate
+  const uniquCategories = [
+    ...new Set(tickets?.map(({ category }) => category)),
+  ];
   return (
     <div className="p-5">
+      <div>
       <div className="lg:grid grid-cols-2 xl:grid-cols-4">
-        <TicketCard />
-        <TicketCard />
-        <TicketCard />
-        <TicketCard />
+        
+      </div>
       </div>
     </div>
   );
