@@ -21,7 +21,7 @@ const TicketCard = ({ ticket }) => {
       <div className="flex mt-2">
         <div className="flex flex-col">
           <p className="text-xs my-1">{ticket.createdAt}</p>
-          <ProgressDisplay />
+          <ProgressDisplay progress={ticket.progress} />
         </div>
         <div className="mr-auto flex items-end">
           <StatusDisplay />
