@@ -68,7 +68,7 @@ const TicketForm = () => {
           onChange={handleChange}
           required={true}
           value={formData.description}
-          rows="5"
+          rows={5}
         />
         <label>دسته بندی</label>
         <select
