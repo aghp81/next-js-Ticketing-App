@@ -11,3 +11,11 @@ export async function POST(req) {
     return NextResponse.json({ message: "خطا", error }, { status: 500 });
   }
 }
+
+export async function GET(){
+  try {
+    
+  } catch (error) {
+    
+  }
+}
