@@ -17,17 +17,22 @@ const Dashboard = async () => {
   // نمایش تیکتها در صفحه اصلی از دیتابیس
   const { tickets } = await getTickets();
 
-
   // for remove duplicate
-  const uniquCategories = [
+  const uniqueCategories = [
     ...new Set(tickets?.map(({ category }) => category)),
   ];
   return (
     <div className="p-5">
       <div>
-      <div className="lg:grid grid-cols-2 xl:grid-cols-4">
-        
-      </div>
+        <div className="lg:grid grid-cols-2 xl:grid-cols-4">
+          {/* اگر تیکت وجود دارد و کتگوری آن یونیک است */}
+          {tickets &&
+            uniqueCategories?.map((uniqueCategory, categoryIndex) => (
+              <div key={categoryIndex} className="mb-4">
+                
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );
