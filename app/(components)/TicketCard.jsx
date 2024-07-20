@@ -14,6 +14,10 @@ const TicketCard = ({ ticket }) => {
       minute: "2-digit",
       hour12: true,
     };
+
+    const date = new Date(timestamp);
+    const formattedDate = date.toLocalString("fa-IR", options);
+    return formattedDate;
   };
   return (
     <div className="flex flex-col bg-card hover:bg-card-hover rounded-md shadow-lg p-3 m-2">
