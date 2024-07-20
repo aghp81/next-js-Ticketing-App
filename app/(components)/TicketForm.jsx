@@ -39,8 +39,8 @@ const TicketForm = () => {
     description: "",
     priority: 1,
     progress: 0,
-    status: "not started",
-    category: "Hardware Problem",
+    status: "شروع نشده",
+    category: "مشکل سخت افزاری",
   };
 
   const [formData, setFormData] = useState(startingTicketData);
