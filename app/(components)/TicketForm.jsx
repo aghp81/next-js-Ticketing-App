@@ -76,8 +76,8 @@ const TicketForm = () => {
           value={formData.category}
           onChange={handleChange}
         >
-          <option value="Hardware Problem">مشکل سخت افزار</option>
-          <option value="Software Problem">مشکل نرم افزار</option>
+          <option value="Hardware Problem">مشکل سخت افزاری</option>
+          <option value="Software Problem">مشکل نرم افزاری</option>
           <option value="Project">پروژه ها</option>
         </select>
         <label>اولویت</label>
