@@ -1,4 +1,4 @@
-"use client" // because use onClick
+"use client"; // because use onClick
 
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,11 +8,11 @@ const DeleteBlock = (id) => {
   const router = useRouter;
 
   const deleteTicket = async () => {
-    const res = await fetch(`http://localhost:3000/api/Tickets/${id}`,{
-      method: "DELETE"
+    const res = await fetch(`http://localhost:3000/api/Tickets/${id}`, {
+      method: "DELETE",
     });
-    if(res.ok){
-      router.refresh()
+    if (res.ok) {
+      router.refresh();
     }
   };
 
