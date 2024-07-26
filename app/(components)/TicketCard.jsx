@@ -28,6 +28,7 @@ const TicketCard = ({ ticket }) => {
           <DeleteBlock id={ticket._id} />
         </div>
       </div>
+      {/* وقتی روی تیکت کلیک میکنیم وارد صفحه ویرایش تیکت می شویم */}
       <Link href={`/TicketPage/${ticket._id}`} style={{ display: "contents" }}>
         <h4>{ticket.title}</h4>
         <hr className="h-px border-0 bg-page mb-2" />
