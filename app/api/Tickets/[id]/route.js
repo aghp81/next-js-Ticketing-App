@@ -3,11 +3,18 @@ import { NextResponse } from "next/server";
 
 // for edit ticket
 export async function GET(req, { params }) {
-  const { id } = params;
 
-  const foundTicket = await Ticket.findOne({ _id: id });
+    try {
+        const { id } = params;
 
-  return NextResponse.json({foundTicket}, {status: 200});
+        const foundTicket = await Ticket.findOne({ _id: id });
+      
+        return NextResponse.json({foundTicket}, {status: 200});
+    } catch (error) {
+    return NextResponse.json({ message: "خطا", error }, { status: 500 });
+    }
+
+
 }
 
 export async function DELETE(req, { params }) {
