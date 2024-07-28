@@ -45,6 +45,14 @@ const TicketForm = ({ticket}) => {
     category: "مشکل سخت افزاری",
   };
 
+  if(EDITMODE){
+    startingTicketData["title"] = ticket.title;
+    startingTicketData["description"] = ticket.description;
+    startingTicketData["priority"] = ticket.priority;
+    startingTicketData["progress"] = ticket.progress;
+    startingTicketData["status"] = ticket.status;
+    startingTicketData["category"] = ticket.category; 
+  }
   const [formData, setFormData] = useState(startingTicketData);
   return (
     <div className="flex justify-center">
