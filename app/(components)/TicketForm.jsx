@@ -4,7 +4,9 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const TicketForm = () => {
+const TicketForm = ({ticket}) => {
+  // if id is new dont edit ticket
+  const EDITMODE = ticket._id === "new" ? false : true
   const router = useRouter();
 
   const handleChange = (e) => {
