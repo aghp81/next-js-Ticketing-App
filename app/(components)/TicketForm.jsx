@@ -4,9 +4,9 @@
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
-const TicketForm = ({ticket}) => {
+const TicketForm = ({ ticket }) => {
   // if id is new dont edit ticket
-  const EDITMODE = ticket._id === "new" ? false : true
+  const EDITMODE = ticket._id === "new" ? false : true;
   const router = useRouter();
 
   const handleChange = (e) => {
@@ -23,13 +23,12 @@ const TicketForm = ({ticket}) => {
     e.preventDefault();
     const res = await fetch("/api/Tickets", {
       method: "POST",
-      body: JSON.stringify({formData}),
-      "content-type": "application/json"
+      body: JSON.stringify({ formData }),
+      "content-type": "application/json",
+    });
 
-    })
-    
-    if (!res.ok){
-      throw new Error("خطا! تیکت ایجاد نشد")
+    if (!res.ok) {
+      throw new Error("خطا! تیکت ایجاد نشد");
     }
 
     router.refresh();
@@ -45,13 +44,13 @@ const TicketForm = ({ticket}) => {
     category: "مشکل سخت افزاری",
   };
 
-  if(EDITMODE){
+  if (EDITMODE) {
     startingTicketData["title"] = ticket.title;
     startingTicketData["description"] = ticket.description;
     startingTicketData["priority"] = ticket.priority;
     startingTicketData["progress"] = ticket.progress;
     startingTicketData["status"] = ticket.status;
-    startingTicketData["category"] = ticket.category; 
+    startingTicketData["category"] = ticket.category;
   }
   const [formData, setFormData] = useState(startingTicketData);
   return (
@@ -61,7 +60,8 @@ const TicketForm = ({ticket}) => {
         method="post"
         onSubmit={handleSubmit}
       >
-        <h3>ایجاد تیکت</h3>
+        {/* if ticket is EDITMODE show edit ticket alse show create ticket */}
+        <h3>{EDITMODE ? "ویرایش تیکت" : "ایجاد تیکت"}</h3>
         <label>عنوان</label>
         <input
           id="title"
@@ -148,11 +148,7 @@ const TicketForm = ({ticket}) => {
             onChange={handleChange}
           />
           <label>وضعیت</label>
-          <select
-            name="status"
-            value={formData.status}
-            onChange={handleChange}
-          >
+          <select name="status" value={formData.status} onChange={handleChange}>
             <option value="not started">شروع نشده</option>
             <option value="started">شروع شده</option>
             <option value="done"> انجام شده</option>
