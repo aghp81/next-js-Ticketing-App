@@ -21,15 +21,29 @@ const TicketForm = ({ ticket }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("/api/Tickets", {
-      method: "POST",
-      body: JSON.stringify({ formData }),
-      "content-type": "application/json",
-    });
 
-    if (!res.ok) {
-      throw new Error("خطا! تیکت ایجاد نشد");
-    }
+    // if EDITMODE method PUT else method post
+    if (EDITMODE) {
+      const res = await fetch(`/api/Tickets/${ticket._id}`, {
+        method: "PUT",
+        body: JSON.stringify({ formData }),
+        "content-type": "application/json",
+      });
+
+      if (!res.ok) {
+        throw new Error("خطا! تیکت ویرایش نشد");
+      }
+    } else {
+      const res = await fetch("/api/Tickets", {
+        method: "POST",
+        body: JSON.stringify({ formData }),
+        "content-type": "application/json",
+      });
+
+      if (!res.ok) {
+        throw new Error("خطا! تیکت ایجاد نشد");
+      }
+    } // else method post
 
     router.refresh();
     router.push("/");
@@ -153,7 +167,11 @@ const TicketForm = ({ ticket }) => {
             <option value="started">شروع شده</option>
             <option value="done"> انجام شده</option>
           </select>
-          <input type="submit" className="btn max-w-xs" value={EDITMODE ? "ویرایش تیکت" : "ایجاد تیکت"} />
+          <input
+            type="submit"
+            className="btn max-w-xs"
+            value={EDITMODE ? "ویرایش تیکت" : "ایجاد تیکت"}
+          />
         </div>
       </form>
     </div>
