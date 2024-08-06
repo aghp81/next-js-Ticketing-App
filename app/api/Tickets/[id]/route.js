@@ -3,25 +3,39 @@ import { NextResponse } from "next/server";
 
 // for edit ticket
 export async function GET(req, { params }) {
+  try {
+    const { id } = params;
 
-    try {
-        const { id } = params;
+    const foundTicket = await Ticket.findOne({ _id: id });
 
-        const foundTicket = await Ticket.findOne({ _id: id });
-      
-        return NextResponse.json({foundTicket}, {status: 200});
-    } catch (error) {
+    return NextResponse.json({ foundTicket }, { status: 200 });
+  } catch (error) {
     return NextResponse.json({ message: "خطا", error }, { status: 500 });
-    }
-
-
+  }
 }
 
+// DELETE method
 export async function DELETE(req, { params }) {
   try {
     const { id } = params;
     await Ticket.findByIdAndDelete(id);
     return NextResponse.json({ message: "تیکت حذف شد." }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "خطا", error }, { status: 500 });
+  }
+}
+
+// PUT method
+export async function PUT(req, { params }) {
+  try {
+    const { id } = params;
+    const body = await req.json();
+    const ticketData = body.formatData;
+
+    const updateTicketData = await Ticket.findByIdAndUpdate(id, {
+      ...ticketData,
+    });
+    return NextResponse.json({ message: "تیکت ویرایش شد." }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ message: "خطا", error }, { status: 500 });
   }
