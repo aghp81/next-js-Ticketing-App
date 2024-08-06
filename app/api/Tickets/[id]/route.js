@@ -30,11 +30,12 @@ export async function PUT(req, { params }) {
   try {
     const { id } = params;
     const body = await req.json();
-    const ticketData = body.formatData;
+    const ticketData = body.formData;
 
     const updateTicketData = await Ticket.findByIdAndUpdate(id, {
       ...ticketData,
     });
+    console.log("PUT ran", ticketData);
     return NextResponse.json({ message: "تیکت ویرایش شد." }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ message: "خطا", error }, { status: 500 });
